@@ -10,7 +10,7 @@ if (hours >= 18){$("h1").text("stop working")};
 //replace 15:00 on the bottom with the hour at loading
 $(".currenthour").text(timeAsText);
 
-//a function that will update bottom hour
+//update bottom hour every second
 function updateTime(){
     var currentTimeUpdate = new Date();
     var hoursUpdate = currentTimeUpdate.getHours();
@@ -20,5 +20,4 @@ function updateTime(){
     $(".currenthour").text(timeAsTextUpdate);
 }
 
-//call an update for bottom hour every second
 setInterval(updateTime, 1000);
