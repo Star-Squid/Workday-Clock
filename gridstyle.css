@@ -1,0 +1,191 @@
+:root {
+    --white: #EBE7E0;
+    --light: #FCEC92;
+    --medium: #F7C771;
+    --med-grey: #D1CDC5;
+    --dark: #ABA9A4;
+    --black: #000000;
+
+    --basic: 'Fauna One', serif;
+    --fancy: 'Cinzel Decorative', cursive;
+
+    --domeheight: 50vh;
+
+  }
+
+  div, 
+  div:before, 
+  div:after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--white);
+    background-color: var(--white);
+    color: var(--black);
+    font-family: var(--basic);
+    text-align: center;
+
+    background-image: linear-gradient(0deg, var(--white) 0% 50%, var(--dark) 100%);
+
+  }
+
+ 
+
+  .container{
+      width: 95vw;
+      height: 100vh;
+
+
+    display: grid;
+    grid-template-columns: 97vw;
+    /* grid-template-rows: repeat(5 fit-content()); */
+    grid-template-rows: 20% 50% 15% 10% 5%;
+
+
+    place-items: stretch;
+
+  }
+
+
+
+  .main-dome{
+
+    position: absolute;
+
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    height: var(--domeheight);
+    width: calc(var(--domeheight) * 2);
+    border-top-left-radius: calc(var(--domeheight) * 2);
+    border-top-right-radius: calc(var(--domeheight) * 2);
+
+    background: 
+      radial-gradient(
+        circle at 50% 100%,
+          var(--white) calc(40% - 1px), 
+          transparent 40%),
+
+      conic-gradient(from -90deg at 50% 100%,
+      var(--medium) 20deg,
+      var(--light) 20deg 40deg,
+      var(--medium) 40deg 60deg,
+      var(--light) 60deg 80deg,
+      var(--medium) 80deg 100deg,
+      var(--light) 100deg 120deg,
+      var(--medium) 120deg 140deg,
+      var(--light) 140deg 160deg,
+      var(--medium) 160deg 180deg);
+
+
+        /*rainbow*/
+		/* conic-gradient(from -90deg at 50% 100%,
+			#43a1cd 10%, #639b47 0% 20%, #9ac147 0% 30%, #e1e23b 0% 40%, #f7941e 0% 50%, 
+			#ba3e2e 0% 60%, #9a1d34 0% 70%, #662a6c 0% 80%, #272b66 0% 90%, #2d559f 0%); */
+
+  }  
+  
+  /* the cell with the bottom hour */
+  .cell-4{
+background-color: var(--dark);
+overflow: hidden;
+margin-top: 0;
+align-items: center;
+justify-items: center;
+  }
+
+  .hours{
+    position: absolute;
+
+  
+      width: calc((var(--domeheight) * 2));
+      height: var(--domeheight);
+  }
+
+  .number  {
+    font-family: var(--basic);
+    font-size: 1.5 rem;
+    height: calc(var(--domeheight) + 1.5rem);
+    position: absolute;
+    display:inline-block;
+    top: -1.5rem;
+    left: calc(50% - 0.75rem);
+  width: 1.5rem;
+
+  transform-origin: bottom center;
+
+  /* transform: translate(-50%, -50%); */
+  }
+
+ .number:first-child{
+  transform: rotate(-90deg)
+ }
+ .number:nth-child(2){
+  transform: rotate(-70deg)
+} 
+.number:nth-child(3){
+  transform: rotate(-50deg)
+} 
+.number:nth-child(4){
+  transform: rotate(-30deg)
+} 
+.number:nth-child(5){
+  transform: rotate(-10deg)
+} 
+.number:nth-child(6){
+  transform: rotate(10deg)
+} 
+.number:nth-child(7){
+  transform: rotate(30deg)
+} 
+.number:nth-child(8){
+  transform: rotate(50deg)
+} 
+.number:nth-child(9){
+  transform: rotate(70deg)
+} 
+ .number:last-child{
+transform:rotate(90deg);
+} 
+
+.small-dome{
+  position: absolute;
+
+  left: 50%;
+
+  transform: translate(-50%, 0%);
+
+  height: calc(var(--domeheight) / 4);
+  width: calc(var(--domeheight) / 2);
+  border-top-left-radius: calc(var(--domeheight) / 2);
+  border-top-right-radius: calc(var(--domeheight) / 2);
+
+  background: 
+  radial-gradient(
+    circle at 50% 100%,
+      var(--white) calc(30% - 1px), 
+      transparent 30%),
+
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 40deg,
+    var(--white) 41deg 43deg,
+    var(--medium) 44deg 88deg,
+    var(--white) 89deg 91deg,
+    var(--medium) 92deg 136deg,
+    var(--white) 137deg 139deg,
+    var(--medium) 140deg 180deg);
+}
+
+  h1{
+    font-family: var(--fancy);
+    padding-top: 2rem;
+  }
+
+  h2 {
+    font-family: var(--fancy);
+    font-size: 1.5 rem;
+    padding: 0;
+    margin: 0;
+  }
+
