@@ -1,23 +1,23 @@
-//time-related variables
-var currentTime = new Date();
-var hours = currentTime.getHours();
-var minutes = currentTime.getMinutes();
-var timeAsText = hours + " : " + minutes;
+
+function updateTime(){
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var timeAsText = hours + " : " + minutes;
+    var smallTimeAsText = hours + " : 0" + minutes;
+    
+//update bottom hour
+    if (minutes < 10){
+        $(".currenthour").text(smallTimeAsText);
+    } else {$(".currenthour").text(timeAsText);
+};
 
 //out of hours title
-if (hours >= 18){$("h1").text("stop working")};
+    if (hours >= 18){$("h1").text("stop working")};
 
-//replace 15:00 on the bottom with the hour at loading
-$(".currenthour").text(timeAsText);
+//change gradient on big dome
 
-//update bottom hour every second
-function updateTime(){
-    var currentTimeUpdate = new Date();
-    var hoursUpdate = currentTimeUpdate.getHours();
-    var minutesUpdate = currentTimeUpdate.getMinutes();
-    var timeAsTextUpdate = hoursUpdate + " : " + minutesUpdate;
-
-    $(".currenthour").text(timeAsTextUpdate);
+//change gradient on small dome
 }
 
 setInterval(updateTime, 1000);
