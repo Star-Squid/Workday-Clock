@@ -1,17 +1,16 @@
-//out of hours title
-if (hours >= 18){$("h1").text("stop working")};
-
 //time-related variables
 var currentTime = new Date();
 var hours = currentTime.getHours();
 var minutes = currentTime.getMinutes();
 var timeAsText = hours + " : " + minutes;
 
+//out of hours title
+if (hours >= 18){$("h1").text("stop working")};
 
-// var currentHour = document.getElementsByClassName("currenthour")[0];
+//replace 15:00 on the bottom with the hour at loading
+$(".currenthour").text(timeAsText);
 
-// console.log(currentHour);
-
+//a function that will update bottom hour
 function updateTime(){
     // var currentTime = new Date()
     // var hours = currentTime.getHours()
@@ -27,11 +26,6 @@ function updateTime(){
     // }
 }
 
-//replace 15:00 on the bottom with the hour at loading
-$(".currenthour").text(timeAsText);
-
-
-
-
+//call an update for bottom hour every second
 // setInterval(updateTime, 1000);
 // setInterval(addSeconds, 1000);
