@@ -67,6 +67,7 @@
           var(--white) calc(40% - 1px), 
           transparent 40%),
 
+        
       conic-gradient(from -90deg at 50% 100%,
       var(--medium) 20deg,
       var(--light) 20deg 40deg,
@@ -79,12 +80,27 @@
       var(--medium) 160deg 180deg);
 
 
-        /*rainbow*/
+         /* rainbow*/
 		/* conic-gradient(from -90deg at 50% 100%,
 			#43a1cd 10%, #639b47 0% 20%, #9ac147 0% 30%, #e1e23b 0% 40%, #f7941e 0% 50%, 
 			#ba3e2e 0% 60%, #9a1d34 0% 70%, #662a6c 0% 80%, #272b66 0% 90%, #2d559f 0%); */
 
   }  
+/* classes for gradients of main dome */
+ .for5to10{
+  background:
+  conic-gradient(from -90deg at 50% 100%,
+      var(--black) 20deg,
+      var(--light) 20deg 40deg,
+      var(--black) 40deg 60deg,
+      var(--light) 60deg 80deg,
+      var(--black) 80deg 100deg,
+      var(--light) 100deg 120deg,
+      var(--black) 120deg 140deg,
+      var(--light) 140deg 160deg,
+      var(--black) 160deg 180deg);
+}
+
   
   /* the cell with the bottom hour */
   .cell-4{
