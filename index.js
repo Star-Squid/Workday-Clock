@@ -12,20 +12,13 @@ $(".currenthour").text(timeAsText);
 
 //a function that will update bottom hour
 function updateTime(){
-    // var currentTime = new Date()
-    // var hours = currentTime.getHours()
-    // var minutes = currentTime.getMinutes()
-    // if (minutes < 10){
-    //     minutes = "0" + minutes
-    // }
-    // var t_str = hours + ":" + minutes + " ";
-    // if(hours > 11){
-    //     t_str += "PM";
-    // } else {
-    //     t_str += "AM";
-    // }
+    var currentTimeUpdate = new Date();
+    var hoursUpdate = currentTimeUpdate.getHours();
+    var minutesUpdate = currentTimeUpdate.getMinutes();
+    var timeAsTextUpdate = hoursUpdate + " : " + minutesUpdate;
+
+    $(".currenthour").text(timeAsTextUpdate);
 }
 
 //call an update for bottom hour every second
-// setInterval(updateTime, 1000);
-// setInterval(addSeconds, 1000);
+setInterval(updateTime, 1000);
