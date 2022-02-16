@@ -5,6 +5,8 @@
     --med-grey: #D1CDC5;
     --dark: #ABA9A4;
     --black: #000000;
+    --transparency:rgba(0, 0, 0, 0);
+    --seethrough:rgba(31, 0, 92, 0.3);
 
     --basic: 'Fauna One', serif;
     --fancy: 'Cinzel Decorative', cursive;
@@ -30,8 +32,8 @@
 
     --overlay:
 conic-gradient(from -90deg at 50% 100%,
-rgba(31, 0, 92, 0.3) var(--timeasdegree), 
-rgba(172, 37, 94, 0) var(--timeasdegree) 180deg 
+var(--seethrough) var(--timeasdegree), 
+var(--transparency) var(--timeasdegree) 180deg 
 );
 
 
@@ -48,8 +50,8 @@ rgba(172, 37, 94, 0) var(--timeasdegree) 180deg
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
-    rgba(31, 0, 92, 0.3) var(--minutesasdegree), 
-    rgba(172, 37, 94, 0) var(--minutesasdegree) 180deg 
+    var(--seethrough) var(--minutesasdegree), 
+    var(--transparency) var(--minutesasdegree) 180deg 
     );
 
     --rays: 
@@ -80,7 +82,8 @@ rgba(172, 37, 94, 0) var(--timeasdegree) 180deg
     height: 100vh;
     display: grid;
     grid-template-columns: 97vw;
-    grid-template-rows: 20% 50% 15% 10% 5%;
+    /* grid-template-rows: 20% 50% 15% 10% 5%; */
+    grid-template-rows: 2fr 5fr 1.5fr 1fr 0.5fr;
     place-items: stretch;
   }
 
@@ -107,23 +110,8 @@ rgba(172, 37, 94, 0) var(--timeasdegree) 180deg
        
         var(--stripes);
   }  
-/* classes for gradients of main dome */
- /* .for5to10{
-  background:
-  conic-gradient(from -90deg at 50% 100%,
-      var(--black) 20deg,
-      var(--light) 20deg 40deg,
-      var(--black) 40deg 60deg,
-      var(--light) 60deg 80deg,
-      var(--black) 80deg 100deg,
-      var(--light) 100deg 120deg,
-      var(--black) 120deg 140deg,
-      var(--light) 140deg 160deg,
-      var(--black) 160deg 180deg);
-} */
-
   
-  /* the cell with the bottom hour */
+ 
   .cell-4{
 background-color: var(--dark);
 overflow: hidden;
@@ -150,10 +138,7 @@ justify-items: center;
     top: -1.5rem;
     left: calc(50% - 0.75rem);
   width: 1.5rem;
-
   transform-origin: bottom center;
-
-  /* transform: translate(-50%, -50%); */
   }
 
  .number:first-child{
@@ -217,3 +202,70 @@ transform:rotate(90deg);
     margin: auto;
   }
 
+  h3 {
+    font-family: var(--basic);
+    font-size: 0.6 rem;
+    padding: 0;
+    margin: auto;
+  }
+
+  /* colour options */
+.cell-5{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+}
+.tile:before{
+  content: " ";
+  z-index: -1;
+  width: 67px;
+  height: 67px;
+  border: solid 4px var(--dark);
+  position: absolute;
+  border-radius: 5px;
+  top: -5px;
+  left: -5px;
+  right: 5px;
+  bottom: 5px;
+}
+
+.tile{
+  position: relative;
+  width: 62px;
+  height: 62px;
+  border: solid 3px var(--white);
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-items: center;
+  text-align: center;
+  transform: scale(0.7);
+  flex-basis: auto;
+}
+
+.tile:hover{
+  transform: scale(1);
+  transition-delay: 0.5s ease;
+}
+
+.sunrise{
+  background: rgb(255,255,255);
+  background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(248,208,121,1) 40%, rgba(171,170,164,1) 100%);
+}
+
+.sunset{
+  background: rgb(227,47,12);
+  background: linear-gradient(137deg, rgba(227,47,12,1) 2%, rgba(64,132,255,1) 50%, rgba(245,227,155,1) 100%);
+}
+
+.newspaper{
+  background: rgb(55,51,50);
+  background: linear-gradient(145deg, rgba(55,51,50,1) 2%, rgba(128,131,136,1) 19%, rgba(238,238,238,1) 73%);
+}
+
+  .pizza{
+  background: rgb(227,47,12);
+  background: linear-gradient(137deg, rgba(227,47,12,1) 2%, rgba(255,202,64,1) 50%, rgba(245,226,199,1) 100%);
+}
