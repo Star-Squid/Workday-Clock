@@ -31,11 +31,9 @@ document.documentElement.style
 .setProperty('--timeasdegree', mainDomeDeg);
 
 //change gradient on small dome
-                                                    
+document.documentElement.style
+.setProperty('--minutesasdegree', smallDomeDeg);                                                  
 };
                                                 
 updateTime();
 setInterval(updateTime, 10000);
-var result = getComputedStyle(document.documentElement)
-   .getPropertyValue('--timeasdegree');
-console.log(result);

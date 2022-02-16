@@ -13,6 +13,8 @@
 
     --timeasdegree: 35deg;
 
+    --minutesasdegree: 48deg;
+
   /* main dome styles */
     --stripes:
     conic-gradient(from -90deg at 50% 100%,
@@ -43,6 +45,12 @@ rgba(172, 37, 94, 0) var(--timeasdegree) 180deg
     var(--medium) 92deg 136deg,
     var(--white) 137deg 139deg,
     var(--medium) 140deg 180deg);
+
+    --smalloverlay:
+    conic-gradient(from -90deg at 50% 100%,
+    rgba(31, 0, 92, 0.3) var(--minutesasdegree), 
+    rgba(172, 37, 94, 0) var(--minutesasdegree) 180deg 
+    );
 
     --rays: 
       radial-gradient(
@@ -193,7 +201,7 @@ transform:rotate(90deg);
 
   background: 
     var(--rays),
-
+    var(--smalloverlay),
     var(--smallstripes);
 }
 
