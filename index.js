@@ -1,5 +1,5 @@
 
-
+//the "I do everything here" function
 function updateTime(){
     var currentTime = new Date();
     var hours = currentTime.getHours();
@@ -11,28 +11,29 @@ function updateTime(){
     if (minutes < 10){
         $(".currenthour").text(smallTimeAsText);
     } else {$(".currenthour").text(timeAsText);
-};
+    };
 
-//out of hours title
-if (hours >= 18){$("h1").text("stop working")};
+    //out of hours title
+    if (hours >= 18){$("h1").text("stop working")}
+    else if (hours < 9){$("h1").text("preparing for the day...")};
 
-//convert time to degree of dome
-var degFromHour = ((hours - 9) * 20);
-var degFromMinute = minutes / 3;
-var mainDomeDeg = Math.floor(degFromHour + degFromMinute) + "deg";
-var smallDomeDeg = minutes * 3 + "deg";
+    //convert time to degree of dome
+    var degFromHour = ((hours - 9) * 20);
+    var degFromMinute = minutes / 3;
+    var mainDomeDeg = Math.floor(degFromHour + degFromMinute) + "deg";
+    var smallDomeDeg = minutes * 3 + "deg";
 
-console.log("Main degrees:" + mainDomeDeg + " Small degrees:" + smallDomeDeg);
+    console.log("Main degrees:" + mainDomeDeg + " Small degrees:" + smallDomeDeg);
 
-//change gradient on main dome
+    //change gradient on main dome
 
 
-document.documentElement.style
-.setProperty('--timeasdegree', mainDomeDeg);
+    document.documentElement.style
+    .setProperty('--timeasdegree', mainDomeDeg);
 
-//change gradient on small dome
-document.documentElement.style
-.setProperty('--minutesasdegree', smallDomeDeg);                                                  
+    //change gradient on small dome
+    document.documentElement.style
+    .setProperty('--minutesasdegree', smallDomeDeg);                                                  
 };
                                                 
 updateTime();

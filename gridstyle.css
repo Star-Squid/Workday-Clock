@@ -31,10 +31,10 @@
     var(--medium) 160deg 180deg);
 
     --overlay:
-conic-gradient(from -90deg at 50% 100%,
-var(--seethrough) var(--timeasdegree), 
-var(--transparency) var(--timeasdegree) 180deg 
-);
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--timeasdegree), 
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    );
 
 
   /* small dome styles */
@@ -51,10 +51,10 @@ var(--transparency) var(--timeasdegree) 180deg
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
     var(--seethrough) var(--minutesasdegree), 
-    var(--transparency) var(--minutesasdegree) 180deg 
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
     );
 
-    --rays: 
+    --makearainbow: 
       radial-gradient(
       circle at 50% 100%,
         var(--white) calc(30% - 1px), 
@@ -103,40 +103,37 @@ var(--transparency) var(--timeasdegree) 180deg
     background: 
       radial-gradient(
         circle at 50% 100%,
-          var(--white) calc(40% - 1px), 
-          transparent 40%),
+        var(--white) calc(40% - 1px), 
+        transparent 40%),
 
         var(--overlay),
-       
         var(--stripes);
   }  
   
  
   .cell-4{
-background-color: var(--dark);
-overflow: hidden;
-margin-top: 0;
-display: flex;
-align-items: center;
-justify-items: center;
+  background-color: var(--dark);
+  overflow: hidden;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-items: center;
   }
 
   .hours{
-    position: absolute;
-
-  
-      width: calc((var(--domeheight) * 2));
-      height: var(--domeheight);
+  position: absolute;
+  width: calc((var(--domeheight) * 2));
+  height: var(--domeheight);
   }
 
   .number  {
-    font-family: var(--basic);
-    font-size: 1.5 rem;
-    height: calc(var(--domeheight) + 1.5rem);
-    position: absolute;
-    display:inline-block;
-    top: -1.5rem;
-    left: calc(50% - 0.75rem);
+  font-family: var(--basic);
+  font-size: 1.5 rem;
+  height: calc(var(--domeheight) + 1.5rem);
+  position: absolute;
+  display:inline-block;
+  top: -1.5rem;
+  left: calc(50% - 0.75rem);
   width: 1.5rem;
   transform-origin: bottom center;
   }
@@ -174,9 +171,7 @@ transform:rotate(90deg);
 
 .small-dome{
   position: absolute;
-
   left: 50%;
-
   transform: translate(-50%, 0%);
 
   height: calc(var(--domeheight) / 4);
@@ -185,7 +180,7 @@ transform:rotate(90deg);
   border-top-right-radius: calc(var(--domeheight) / 2);
 
   background: 
-    var(--rays),
+    var(--makearainbow),
     var(--smalloverlay),
     var(--smallstripes);
 }
@@ -265,7 +260,7 @@ transform:rotate(90deg);
   background: linear-gradient(145deg, rgba(55,51,50,1) 2%, rgba(128,131,136,1) 19%, rgba(238,238,238,1) 73%);
 }
 
-  .pizza{
+.pizza{
   background: rgb(227,47,12);
   background: linear-gradient(137deg, rgba(227,47,12,1) 2%, rgba(255,202,64,1) 50%, rgba(245,226,199,1) 100%);
 }
