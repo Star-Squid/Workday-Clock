@@ -36,6 +36,11 @@
   var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
   );
 
+  --makeabigrainbow:
+  radial-gradient(
+      circle at 50% 100%,
+      var(--white) calc(40% - 1px), 
+      transparent 40%);
 
 /* small dome styles */
   --smallstripes: 
@@ -99,6 +104,11 @@
     var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
     );
 
+    --makeabigrainbow:
+    radial-gradient(
+        circle at 50% 100%,
+        var(--white) calc(40% - 1px), 
+        transparent 40%);
 
   /* small dome styles */
     --smallstripes: 
@@ -162,6 +172,11 @@
     var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
     );
 
+    --makeabigrainbow:
+    radial-gradient(
+        circle at 50% 100%,
+        var(--white) calc(40% - 1px), 
+        transparent 40%);
 
   /* small dome styles */
     --smallstripes: 
@@ -226,6 +241,11 @@
     var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
     );
 
+    --makeabigrainbow:
+    radial-gradient(
+        circle at 50% 100%,
+        var(--white) calc(40% - 1px), 
+        transparent 40%);
 
   /* small dome styles */
     --smallstripes: 
@@ -254,13 +274,13 @@
 
   :root.newstheme {
     --white: #EBE7E0;
-    --light: #a5a0a0;
+    --light: #a5a5a5;
     --medium: #6e6e6e;
-    --med-grey: #D1CDC5;
-    --dark: #7c7c7a;
+    --med-grey: #d1d1d1;
+    --dark: #7c7c7c;
     --black: #000000;
     --transparency:rgba(0, 0, 0, 0);
-    --seethrough:rgba(233, 231, 236, 0.6);
+    --seethrough:rgba(233, 233, 233, 0.6);
 
     --basic: 'Fauna One', serif;
     --fancy: 'Abril Fatface', cursive;;
@@ -273,22 +293,19 @@
 
   /* main dome styles */
     --stripes:
-    conic-gradient(from -90deg at 50% 100%,
-    var(--medium) 20deg,
-    var(--light) 20deg 40deg,
-    var(--medium) 40deg 60deg,
-    var(--light) 60deg 80deg,
-    var(--medium) 80deg 100deg,
-    var(--light) 100deg 120deg,
-    var(--medium) 120deg 140deg,
-    var(--light) 140deg 160deg,
-    var(--medium) 160deg 180deg);
+    url(news3.png);
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
     var(--seethrough) var(--timeasdegree), 
     var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
     );
+
+    --makeabigrainbow:
+    radial-gradient(
+        circle at 50% 100%,
+        var(--white) calc(40% - 1px), 
+        transparent 40%);
 
 
   /* small dome styles */
@@ -337,16 +354,8 @@
 
   /* main dome styles */
     --stripes:
-    conic-gradient(from -90deg at 50% 100%,
-    var(--medium) 20deg,
-    var(--light) 20deg 40deg,
-    var(--medium) 40deg 60deg,
-    var(--light) 60deg 80deg,
-    var(--medium) 80deg 100deg,
-    var(--light) 100deg 120deg,
-    var(--medium) 120deg 140deg,
-    var(--light) 140deg 160deg,
-    var(--medium) 160deg 180deg);
+    url("pizza3.png");
+    
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
@@ -354,17 +363,16 @@
     var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
     );
 
+    --makeabigrainbow:
+    radial-gradient(
+      circle at 50% 100%,
+        transparent 30%, 
+        transparent 30%);
+
 
   /* small dome styles */
-    --smallstripes: 
-    conic-gradient(from -90deg at 50% 100%,
-    var(--medium) 40deg,
-    var(--white) 41deg 43deg,
-    var(--medium) 44deg 88deg,
-    var(--white) 89deg 91deg,
-    var(--medium) 92deg 136deg,
-    var(--white) 137deg 139deg,
-    var(--medium) 140deg 180deg);
+    --smallstripes:
+    url("pizza2.png");
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
@@ -373,9 +381,9 @@
     );
 
     --makearainbow: 
-      radial-gradient(
+    radial-gradient(
       circle at 50% 100%,
-        var(--white) calc(30% - 1px), 
+        transparent 30%, 
         transparent 30%);
   }
 
@@ -421,13 +429,11 @@
     border-top-right-radius: calc(var(--domeheight) * 2);
 
     background: 
-      radial-gradient(
-        circle at 50% 100%,
-        var(--white) calc(40% - 1px), 
-        transparent 40%),
-
+        var(--makeabigrainbow),
         var(--overlay),
         var(--stripes);
+
+    background-size: 100%;
   }  
   
  
@@ -503,6 +509,8 @@ transform:rotate(90deg);
     var(--makearainbow),
     var(--smalloverlay),
     var(--smallstripes);
+
+  background-size: 100%;
 }
 
   h1{

@@ -39,3 +39,7 @@ function updateTime(){
                                                 
 updateTime();
 setInterval(updateTime, 10000);
+
+//this will change the themes
+function setTheme (theme) {document.documentElement.className = theme};
+setTheme('eggtheme');
