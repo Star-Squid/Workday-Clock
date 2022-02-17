@@ -15,7 +15,8 @@ function updateTime(){
 
     //out of hours title
     if (hours >= 18){$("h1").text("stop working")}
-    else if (hours < 9){$("h1").text("preparing for the day...")};
+    else if (hours < 9){$("h1").text("preparing for the day...")}
+    else {$("h1").text("Workday Clock")};
 
     //convert time to degree of dome
     var degFromHour = ((hours - 9) * 20);

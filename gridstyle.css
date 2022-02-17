@@ -245,10 +245,14 @@ transform:rotate(90deg);
   transition-delay: 0.5s ease;
 }
 
-.sunrise{
+.egg{
   background: rgb(255,255,255);
   background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(248,208,121,1) 40%, rgba(171,170,164,1) 100%);
 }
+
+.sunrise{
+  background: rgb(146,208,231);
+  background: linear-gradient(145deg, rgba(146,208,231,1) 0%, rgba(249,228,233,1) 43%, rgba(252,211,191,1) 82%, rgba(249,159,159,1) 100%);}
 
 .sunset{
   background: rgb(227,47,12);
