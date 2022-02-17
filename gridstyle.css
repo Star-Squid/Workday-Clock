@@ -1,7 +1,70 @@
-:root {
+:root{
+  --white: #EBE7E0;
+  --light: #FCEC92;
+  --medium: #F7C771;
+  --med-grey: #D1CDC5;
+  --dark: #ABA9A4;
+  --black: #000000;
+  --transparency:rgba(0, 0, 0, 0);
+  --seethrough:rgba(31, 0, 92, 0.3);
+
+  --basic: 'Fauna One', serif;
+  --fancy: 'Cinzel Decorative', cursive;
+
+  --domeheight: 50vh;
+
+  --timeasdegree: 35deg;
+
+  --minutesasdegree: 48deg;
+
+/* main dome styles */
+  --stripes:
+  conic-gradient(from -90deg at 50% 100%,
+  var(--medium) 20deg,
+  var(--light) 20deg 40deg,
+  var(--medium) 40deg 60deg,
+  var(--light) 60deg 80deg,
+  var(--medium) 80deg 100deg,
+  var(--light) 100deg 120deg,
+  var(--medium) 120deg 140deg,
+  var(--light) 140deg 160deg,
+  var(--medium) 160deg 180deg);
+
+  --overlay:
+  conic-gradient(from -90deg at 50% 100%,
+  var(--seethrough) var(--timeasdegree), 
+  var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+  );
+
+
+/* small dome styles */
+  --smallstripes: 
+  conic-gradient(from -90deg at 50% 100%,
+  var(--medium) 40deg,
+  var(--white) 41deg 43deg,
+  var(--medium) 44deg 88deg,
+  var(--white) 89deg 91deg,
+  var(--medium) 92deg 136deg,
+  var(--white) 137deg 139deg,
+  var(--medium) 140deg 180deg);
+
+  --smalloverlay:
+  conic-gradient(from -90deg at 50% 100%,
+  var(--seethrough) var(--minutesasdegree), 
+  var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+  );
+
+  --makearainbow: 
+    radial-gradient(
+    circle at 50% 100%,
+      var(--white) calc(30% - 1px), 
+      transparent 30%);
+}
+
+:root.eggtheme {
     --white: #EBE7E0;
     --light: #FCEC92;
-    --medium: #F7C771;
+    --medium: #fdc835;
     --med-grey: #D1CDC5;
     --dark: #ABA9A4;
     --black: #000000;
@@ -60,6 +123,263 @@
         var(--white) calc(30% - 1px), 
         transparent 30%);
   }
+
+  :root.sunrisetheme {
+    --white: #FDEAE4;
+    --light: #E1FDFD;
+    --medium: #D18CBB;
+    --med-grey: #7f8286;
+    --dark: #ABD1E0;
+    --black: #004063;
+    --transparency:rgba(0, 0, 0, 0);
+    --seethrough:rgba(132, 73, 131, 0.7);
+
+    --basic: 'Quicksand', sans-serif;
+    --fancy: 'Pacifico', cursive;
+
+    --domeheight: 50vh;
+
+    --timeasdegree: 35deg;
+
+    --minutesasdegree: 48deg;
+
+  /* main dome styles */
+    --stripes:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--dark) 20deg,
+    var(--light) 20deg 40deg,
+    var(--dark) 40deg 60deg,
+    var(--light) 60deg 80deg,
+    var(--dark) 80deg 100deg,
+    var(--light) 100deg 120deg,
+    var(--dark) 120deg 140deg,
+    var(--light) 140deg 160deg,
+    var(--dark) 160deg 180deg);
+
+    --overlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--timeasdegree), 
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    );
+
+
+  /* small dome styles */
+    --smallstripes: 
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 40deg,
+    var(--white) 41deg 43deg,
+    var(--medium) 44deg 88deg,
+    var(--white) 89deg 91deg,
+    var(--medium) 92deg 136deg,
+    var(--white) 137deg 139deg,
+    var(--medium) 140deg 180deg);
+
+    --smalloverlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--minutesasdegree), 
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    );
+
+    --makearainbow: 
+      radial-gradient(
+      circle at 50% 100%,
+        var(--white) calc(30% - 1px), 
+        transparent 30%);
+  }
+
+
+  :root.sunsettheme {
+    --white: #1dd8e9;
+    --light: #FFE880;
+    --medium: #FF76BA;
+    --med-grey: #D1CDC5;
+    --dark: #6263a5;
+    --black: #130d38;
+    --transparency:rgba(0, 0, 0, 0);
+    --seethrough:rgba(31, 0, 92, 0.3);
+
+    --basic: 'Fauna One', serif;
+    --fancy: 'Berkshire Swash', cursive;
+
+    --domeheight: 50vh;
+
+    --timeasdegree: 35deg;
+
+    --minutesasdegree: 48deg;
+
+  /* main dome styles */
+    --stripes:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 20deg,
+    var(--light) 20deg 40deg,
+    var(--medium) 40deg 60deg,
+    var(--light) 60deg 80deg,
+    var(--medium) 80deg 100deg,
+    var(--light) 100deg 120deg,
+    var(--medium) 120deg 140deg,
+    var(--light) 140deg 160deg,
+    var(--medium) 160deg 180deg);
+
+    --overlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--timeasdegree), 
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    );
+
+
+  /* small dome styles */
+    --smallstripes: 
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 40deg,
+    var(--white) 41deg 43deg,
+    var(--medium) 44deg 88deg,
+    var(--white) 89deg 91deg,
+    var(--medium) 92deg 136deg,
+    var(--white) 137deg 139deg,
+    var(--medium) 140deg 180deg);
+
+    --smalloverlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--minutesasdegree), 
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    );
+
+    --makearainbow: 
+      radial-gradient(
+      circle at 50% 100%,
+        var(--white) calc(30% - 1px), 
+        transparent 30%);
+  }
+
+
+  :root.newstheme {
+    --white: #EBE7E0;
+    --light: #a5a0a0;
+    --medium: #6e6e6e;
+    --med-grey: #D1CDC5;
+    --dark: #7c7c7a;
+    --black: #000000;
+    --transparency:rgba(0, 0, 0, 0);
+    --seethrough:rgba(233, 231, 236, 0.6);
+
+    --basic: 'Fauna One', serif;
+    --fancy: 'Abril Fatface', cursive;;
+
+    --domeheight: 50vh;
+
+    --timeasdegree: 35deg;
+
+    --minutesasdegree: 48deg;
+
+  /* main dome styles */
+    --stripes:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 20deg,
+    var(--light) 20deg 40deg,
+    var(--medium) 40deg 60deg,
+    var(--light) 60deg 80deg,
+    var(--medium) 80deg 100deg,
+    var(--light) 100deg 120deg,
+    var(--medium) 120deg 140deg,
+    var(--light) 140deg 160deg,
+    var(--medium) 160deg 180deg);
+
+    --overlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--timeasdegree), 
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    );
+
+
+  /* small dome styles */
+    --smallstripes: 
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 40deg,
+    var(--white) 41deg 43deg,
+    var(--medium) 44deg 88deg,
+    var(--white) 89deg 91deg,
+    var(--medium) 92deg 136deg,
+    var(--white) 137deg 139deg,
+    var(--medium) 140deg 180deg);
+
+    --smalloverlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--minutesasdegree), 
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    );
+
+    --makearainbow: 
+      radial-gradient(
+      circle at 50% 100%,
+        var(--white) calc(30% - 1px), 
+        transparent 30%);
+  }
+
+
+  :root.pizzatheme {
+    --white: #DFB587;
+    --light: #DD4F23;
+    --medium: #f48443;
+    --med-grey: #DD4F23;
+    --dark: #CD9761;
+    --black: #233d24;
+    --transparency:rgba(0, 0, 0, 0);
+    --seethrough:rgba(143, 16, 16, 0.7);
+
+    --basic: 'Fauna One', serif;
+    --fancy: 'Rancho', cursive;
+
+    --domeheight: 50vh;
+
+    --timeasdegree: 35deg;
+
+    --minutesasdegree: 48deg;
+
+  /* main dome styles */
+    --stripes:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 20deg,
+    var(--light) 20deg 40deg,
+    var(--medium) 40deg 60deg,
+    var(--light) 60deg 80deg,
+    var(--medium) 80deg 100deg,
+    var(--light) 100deg 120deg,
+    var(--medium) 120deg 140deg,
+    var(--light) 140deg 160deg,
+    var(--medium) 160deg 180deg);
+
+    --overlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--timeasdegree), 
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    );
+
+
+  /* small dome styles */
+    --smallstripes: 
+    conic-gradient(from -90deg at 50% 100%,
+    var(--medium) 40deg,
+    var(--white) 41deg 43deg,
+    var(--medium) 44deg 88deg,
+    var(--white) 89deg 91deg,
+    var(--medium) 92deg 136deg,
+    var(--white) 137deg 139deg,
+    var(--medium) 140deg 180deg);
+
+    --smalloverlay:
+    conic-gradient(from -90deg at 50% 100%,
+    var(--seethrough) var(--minutesasdegree), 
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    );
+
+    --makearainbow: 
+      radial-gradient(
+      circle at 50% 100%,
+        var(--white) calc(30% - 1px), 
+        transparent 30%);
+  }
+
+
 
   div, 
   div:before, 
@@ -212,7 +532,7 @@ transform:rotate(90deg);
   justify-items: center;
   gap: 5px;
 }
-.tile:before{
+.theme:before{
   content: " ";
   z-index: -1;
   width: 67px;
@@ -226,7 +546,7 @@ transform:rotate(90deg);
   bottom: 5px;
 }
 
-.tile{
+.theme{
   position: relative;
   width: 62px;
   height: 62px;
@@ -240,7 +560,7 @@ transform:rotate(90deg);
   flex-basis: auto;
 }
 
-.tile:hover{
+.theme:hover{
   transform: scale(1);
   transition-delay: 0.5s ease;
 }
@@ -259,7 +579,7 @@ transform:rotate(90deg);
   background: linear-gradient(137deg, rgba(227,47,12,1) 2%, rgba(64,132,255,1) 50%, rgba(245,227,155,1) 100%);
 }
 
-.newspaper{
+.news{
   background: rgb(55,51,50);
   background: linear-gradient(145deg, rgba(55,51,50,1) 2%, rgba(128,131,136,1) 19%, rgba(238,238,238,1) 73%);
 }
