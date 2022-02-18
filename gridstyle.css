@@ -204,12 +204,12 @@
 
 
   :root.sunsettheme {
-    --white: #1dd8e9;
-    --light: #FFE880;
-    --medium: #FF76BA;
+    --white: #028097;
+    --light: #FFB202;
+    --medium: #FD7400;
     --med-grey: #D1CDC5;
-    --dark: #6263a5;
-    --black: #130d38;
+    --dark: #005081;
+    --black: #65CCBB;
     --transparency:rgba(0, 0, 0, 0);
     --seethrough:rgba(31, 0, 92, 0.3);
 
@@ -226,14 +226,14 @@
     --stripes:
     conic-gradient(from -90deg at 50% 100%,
     var(--medium) 20deg,
-    var(--light) 20deg 40deg,
-    var(--medium) 40deg 60deg,
-    var(--light) 60deg 80deg,
-    var(--medium) 80deg 100deg,
-    var(--light) 100deg 120deg,
-    var(--medium) 120deg 140deg,
-    var(--light) 140deg 160deg,
-    var(--medium) 160deg 180deg);
+    var(--light) 21deg 40deg,
+    var(--medium) 41deg 60deg,
+    var(--light) 61deg 80deg,
+    var(--medium) 81deg 100deg,
+    var(--light) 101deg 120deg,
+    var(--medium) 121deg 140deg,
+    var(--light) 141deg 160deg,
+    var(--medium) 161deg 180deg);
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
@@ -275,12 +275,12 @@
   :root.newstheme {
     --white: #EBE7E0;
     --light: #a5a5a5;
-    --medium: #6e6e6e;
+    --medium: #919090;
     --med-grey: #d1d1d1;
     --dark: #7c7c7c;
     --black: #000000;
     --transparency:rgba(0, 0, 0, 0);
-    --seethrough:rgba(233, 233, 233, 0.6);
+    --seethrough:rgba(71, 71, 71, 0.699);
 
     --basic: 'Fauna One', serif;
     --fancy: 'Abril Fatface', cursive;;
@@ -293,7 +293,7 @@
 
   /* main dome styles */
     --stripes:
-    url(news3.png);
+    url(news.png);
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
@@ -310,14 +310,15 @@
 
   /* small dome styles */
     --smallstripes: 
-    conic-gradient(from -90deg at 50% 100%,
+    /* conic-gradient(from -90deg at 50% 100%,
     var(--medium) 40deg,
     var(--white) 41deg 43deg,
     var(--medium) 44deg 88deg,
     var(--white) 89deg 91deg,
     var(--medium) 92deg 136deg,
     var(--white) 137deg 139deg,
-    var(--medium) 140deg 180deg);
+    var(--medium) 140deg 180deg); */
+    url(small-news.png);
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
@@ -354,7 +355,7 @@
 
   /* main dome styles */
     --stripes:
-    url("pizza3.png");
+    url("painted-pizza.png");
     
 
     --overlay:
@@ -372,7 +373,7 @@
 
   /* small dome styles */
     --smallstripes:
-    url("pizza2.png");
+    url("small-pizza.png");
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
@@ -532,7 +533,56 @@ transform:rotate(90deg);
     margin: auto;
   }
 
-  /* colour options */
+  /* colour themes */
+  .themeButton {
+    background:linear-gradient(to bottom, var(--light) 5%, var(--medium) 100%);
+    background-color:var(--light);
+    border-radius:10px;
+    border:3px solid var(--dark);
+    display:inline-block;
+    cursor:pointer;
+    color:var(--black);
+    /* font-size:17px; */
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px var(--dark);
+  }
+
+  .spin-in {
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+    transition: all .75s ease;
+  }
+  
+  .spin-in.show2 {
+    opacity: 1;
+    width: 67px;
+    height: 67px;
+  }
+
+  /* .spin-in {
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+    transform: translateX(0) rotate(0deg);  
+    transition: all .75s ease;
+  }
+  
+  .spin-in.show2 {
+    transform: translateX(450px) rotate(720deg);  
+    opacity: 1;
+  } */
+
+  .themeButton:hover {
+    background:linear-gradient(to bottom, var(--medium) 5%, var(--dark) 100%);
+    background-color:var(--medium);
+  }
+  .themeButton:active {
+    position:relative;
+    top:1px;
+  }
+
 .cell-5{
   display: flex;
   flex-flow: row wrap;

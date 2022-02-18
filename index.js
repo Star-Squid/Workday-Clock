@@ -43,3 +43,8 @@ setInterval(updateTime, 10000);
 //this will change the themes
 function setTheme (theme) {document.documentElement.className = theme};
 setTheme('eggtheme');
+
+//spin-in colour options
+$('.spin').on('click', function(){
+    $('.spin-in').toggleClass('show2');
+});
