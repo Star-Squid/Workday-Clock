@@ -24,8 +24,6 @@ function updateTime(){
     var mainDomeDeg = Math.floor(degFromHour + degFromMinute) + "deg";
     var smallDomeDeg = minutes * 3 + "deg";
 
-    console.log("Main degrees:" + mainDomeDeg + " Small degrees:" + smallDomeDeg);
-
     //change gradient on main dome
 
 
@@ -42,9 +40,50 @@ setInterval(updateTime, 10000);
 
 //this will change the themes
 function setTheme (theme) {document.documentElement.className = theme};
+//this ensures the egg is the default
 setTheme('eggtheme');
 
-//spin-in colour options
+//sliding effect for colour options
 $('.spin').on('click', function(){
     $('.spin-in').toggleClass('show2');
 });
+
+//Custom Appointment button behaviour
+$('.spin-app').on('click', function(){
+
+    //obtain start and end time
+    var userStartHour = window.prompt("Enter the appointment starting hour 9 - 17 (e.g. 15)");
+    var userStartMinute = window.prompt("Enter the appointment starting minutes 0 - 59 (e.g. 30)");
+
+    var userEndHour = window.prompt("Enter the appointment ending hour 9 - 17");
+    var userEndMinute = window.prompt("Enter the appointment ending minutes 0 - 59");
+
+    // convert time to degrees (userStart to appStart)
+    var degFromUserHour = ((userStartHour - 9) * 20);
+    var degFromUserMinute = userStartMinute / 3;
+    var appStart = Math.floor(degFromUserHour + degFromUserMinute) + "deg";
+
+    var degFromUserHour2 = ((userEndHour - 9) * 20);
+    var degFromUserMinute2 = userEndMinute / 3;
+    var appEnd = Math.floor(degFromUserHour2 + degFromUserMinute2) + "deg";
+
+
+    //create gradient stops in appointment layer
+    document.documentElement.style
+    .setProperty('--app-start', appStart);
+
+    document.documentElement.style
+    .setProperty('--app-end', appEnd);
+});
+
+//this converts user-entered appointment times to degree of dome
+
+
+function convertTime(userStart, userEnd){
+
+};
+
+//this enters appointment times in the appointment gradient layer
+function setAppointment (appStart, appEnd) {
+
+};

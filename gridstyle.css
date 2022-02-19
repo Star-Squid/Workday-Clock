@@ -30,15 +30,21 @@
   var(--light) 140deg 160deg,
   var(--medium) 160deg 180deg);
 
+  --app-start: 0deg;
+  --app-end: 0deg;
+
   --appointment:
           /* custom appointment */
           conic-gradient(from -90deg at 50% 100%,
+
           /* set start of appointment, 1h = 20deg, so 10:00 is 20 deg, 11.30 is 45deg */
-          var(--transparency) 45deg,
+          var(--transparency) var(--app-start),
+
           /* from start to end */
-         var(--med-grey) 45deg 75deg,
+         var(--med-grey) var(--app-start) var(--app-end),
+
          /* from end of appointment to end of day */
-         var(--transparency) 75deg 180deg);
+         var(--transparency) var(--app-end) 180deg);
 
   --overlay:
   conic-gradient(from -90deg at 50% 100%,
@@ -352,7 +358,7 @@
     --dark: #CD9761;
     --black: #233d24;
     --transparency:rgba(0, 0, 0, 0);
-    --seethrough:rgba(143, 16, 16, 0.7);
+    --seethrough:rgba(143, 16, 16, 0.5);
 
     --basic: 'Fauna One', serif;
     --fancy: 'Rancho', cursive;
@@ -415,22 +421,21 @@
     background-image: linear-gradient(0deg, var(--white) 0% 50%, var(--dark) 100%);
   }
 
-
   .container{
-    width: 95vw;
-    height: 100vh;
+    width: 98vw;
+    height: 97vh;
     display: grid;
-    grid-template-columns: 97vw;
+    grid-template-columns: 100%;
     /* grid-template-rows: 20% 50% 15% 10% 5%; */
-    grid-template-rows: 2fr 5fr 1.5fr 1fr 0.5fr;
+    /* grid-template-rows: 0.5fr 5fr 1.5fr 1fr 0.5fr; */
+    /* grid-template-rows: 1fr 6fr 1.5fr 0.5fr 1fr; */
+    grid-template-rows: 0.5fr 6fr 1.5fr 1fr 1fr;
+
     place-items: stretch;
   }
 
-
-
   .main-dome{
     position: absolute;
-
     left: 50%;
     transform: translate(-50%, 0%);
 
@@ -447,8 +452,8 @@
 
     background-size: 100%;
   }  
-  
  
+  
   .cell-4{
   background-color: var(--dark);
   overflow: hidden;
@@ -527,19 +532,19 @@ transform:rotate(90deg);
 
   h1{
     font-family: var(--fancy);
-    padding-top: 2rem;
+    padding-top: 2rem, auto, 0;
   }
 
   h2 {
     font-family: var(--fancy);
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     padding: 0;
     margin: auto;
   }
 
   h3 {
     font-family: var(--basic);
-    font-size: 0.6 rem;
+    font-size: 0.6rem;
     padding: 0;
     margin: auto;
   }
@@ -550,20 +555,24 @@ transform:rotate(90deg);
     background-color:var(--light);
     border-radius:10px;
     border:3px solid var(--dark);
-    display:inline-block;
+    /* display:inline-block; */
     cursor:pointer;
     color:var(--black);
-    /* font-size:17px; */
     padding:16px 31px;
     text-decoration:none;
     text-shadow:0px 1px 0px var(--dark);
+  }
+
+  .spin-app{
+    align-self: flex-end;
+    justify-self: flex-end;
   }
 
   .spin-in {
     height: 1px;
     width: 1px;
     opacity: 0;
-    transition: all .75s ease;
+    transition: all .25s ease;
   }
   
   .spin-in.show2 {
@@ -571,19 +580,6 @@ transform:rotate(90deg);
     width: 67px;
     height: 67px;
   }
-
-  /* .spin-in {
-    opacity: 0;
-    height: 50px;
-    width: 50px;
-    transform: translateX(0) rotate(0deg);  
-    transition: all .75s ease;
-  }
-  
-  .spin-in.show2 {
-    transform: translateX(450px) rotate(720deg);  
-    opacity: 1;
-  } */
 
   .themeButton:hover {
     background:linear-gradient(to bottom, var(--medium) 5%, var(--dark) 100%);
@@ -599,6 +595,7 @@ transform:rotate(90deg);
   flex-flow: row wrap;
   align-items: center;
   justify-items: center;
+  align-content: space-between;
   gap: 5px;
 }
 .theme:before{
@@ -627,6 +624,12 @@ transform:rotate(90deg);
   text-align: center;
   transform: scale(0.7);
   flex-basis: auto;
+  cursor:pointer;
+}
+
+.dummytheme{
+  width: 1px;
+  height: 63px;
 }
 
 .theme:hover{
