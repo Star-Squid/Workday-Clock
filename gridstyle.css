@@ -30,6 +30,16 @@
   var(--light) 140deg 160deg,
   var(--medium) 160deg 180deg);
 
+  --appointment:
+          /* custom appointment */
+          conic-gradient(from -90deg at 50% 100%,
+          /* set start of appointment, 1h = 20deg, so 10:00 is 20 deg, 11.30 is 45deg */
+          var(--transparency) 45deg,
+          /* from start to end */
+         var(--med-grey) 45deg 75deg,
+         /* from end of appointment to end of day */
+         var(--transparency) 75deg 180deg);
+
   --overlay:
   conic-gradient(from -90deg at 50% 100%,
   var(--seethrough) var(--timeasdegree), 
@@ -432,6 +442,7 @@
     background: 
         var(--makeabigrainbow),
         var(--overlay),
+        var(--appointment),
         var(--stripes);
 
     background-size: 100%;
