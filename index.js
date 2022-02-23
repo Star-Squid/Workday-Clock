@@ -34,7 +34,8 @@ function updateTime(){
     document.documentElement.style
     .setProperty('--minutesasdegree', smallDomeDeg);                                                  
 };
-                                                
+  
+//initialize the main event
 updateTime();
 setInterval(updateTime, 10000);
 
@@ -43,10 +44,35 @@ function setTheme (theme) {document.documentElement.className = theme};
 //this ensures the egg is the default
 setTheme('eggtheme');
 
-//sliding effect for colour options
+//sliding effect for colour option tiles
 $('.spin').on('click', function(){
     $('.spin-in').toggleClass('show2');
 });
+
+//dialogue popup
+// $(function() {
+//     // this initializes the dialog (and uses some common options that I do)
+//     $("#dialog").dialog({
+//       autoOpen : false, modal : true, show : "blind", hide : "blind"
+//     });
+  
+//     // next add the onclick handler
+//     $("#contactUs").click(function() {
+//       $("#dialog").dialog("open");
+//       return false;
+//     });
+//   });
+
+$(document).ready(function () {
+    $('#dialog').dialog({
+        autoOpen: false,
+        title: 'Basic Dialog'
+    });
+    $('#contactUs').click(function () {
+        $('#dialog').dialog('open');
+    });
+});
+
 
 //Custom Appointment button behaviour
 $('.spin-app').on('click', function(){
@@ -75,15 +101,3 @@ $('.spin-app').on('click', function(){
     document.documentElement.style
     .setProperty('--app-end', appEnd);
 });
-
-//this converts user-entered appointment times to degree of dome
-
-
-function convertTime(userStart, userEnd){
-
-};
-
-//this enters appointment times in the appointment gradient layer
-function setAppointment (appStart, appEnd) {
-
-};
