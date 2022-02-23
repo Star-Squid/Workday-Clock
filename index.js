@@ -51,11 +51,11 @@ $('.spin').on('click', function(){
 
 
 
+
+
 //dialogue popup
 
 $(function() {
-
-
   $( "#dialog-form" ).dialog({
     dialogClass: "no-close",
     autoOpen: false,
@@ -73,6 +73,13 @@ $(function() {
   });
   $( "#obtain-time" ).click(function() {
     $( "#dialog-form" ).dialog( "open" );
+
+//please stop disappearing
+appForm.addEventListener("submit", function(event){
+    event.preventDefault();
+    $( "#dialog-form" ).dialog( "close" );
+  })
+
  });
 });
 
@@ -171,6 +178,8 @@ $(function() {
 var appForm = document.getElementById('submit-time');
 
 
+
+
 appForm.addEventListener('submit', (event) => {
     var getstart = appForm.elements['userStart'];
     var getend = appForm.elements['userEnd'];
@@ -212,7 +221,7 @@ appForm.addEventListener('submit', (event) => {
 });
 
 
-//Custom Appointment button behaviour
+// //Custom Appointment button behaviour
 // $('.spin-app').on('click', function(){
 
 //     //obtain start and end time with prompts
@@ -222,20 +231,20 @@ appForm.addEventListener('submit', (event) => {
 //     var userEndHour = window.prompt("Enter the appointment ending hour 9 - 17");
 //     var userEndMinute = window.prompt("Enter the appointment ending minutes 0 - 59");
 
-    // // convert time to degrees (userStart to appStart)
-    // var degFromUserHour = ((userStartHour - 9) * 20);
-    // var degFromUserMinute = userStartMinute / 3;
-    // var appStart = Math.floor(degFromUserHour + degFromUserMinute) + "deg";
+//     // convert time to degrees (userStart to appStart)
+//     var degFromUserHour = ((userStartHour - 9) * 20);
+//     var degFromUserMinute = userStartMinute / 3;
+//     var appStart = Math.floor(degFromUserHour + degFromUserMinute) + "deg";
 
-    // var degFromUserHour2 = ((userEndHour - 9) * 20);
-    // var degFromUserMinute2 = userEndMinute / 3;
-    // var appEnd = Math.floor(degFromUserHour2 + degFromUserMinute2) + "deg";
+//     var degFromUserHour2 = ((userEndHour - 9) * 20);
+//     var degFromUserMinute2 = userEndMinute / 3;
+//     var appEnd = Math.floor(degFromUserHour2 + degFromUserMinute2) + "deg";
 
 
-    // //create gradient stops in appointment layer
-    // document.documentElement.style
-    // .setProperty('--app-start', appStart);
+//     //create gradient stops in appointment layer
+//     document.documentElement.style
+//     .setProperty('--app-start', appStart);
 
-    // document.documentElement.style
-    // .setProperty('--app-end', appEnd);
+//     document.documentElement.style
+//     .setProperty('--app-end', appEnd);
 // });
