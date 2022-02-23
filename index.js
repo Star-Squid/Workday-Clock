@@ -51,37 +51,17 @@ $('.spin').on('click', function(){
 
 
 
-
-//form for appointment times collection
-const form  = document.getElementById('submit-time');
-
-form.addEventListener('submit', (event) => {
-    var getstart = form.elements['userStart'];
-    var getend = form.elements['userEnd'];
-
-    var start = getstart.value;
-    var end = getend.value;
-
-    console.log(start + " " + end);
-});
-
 //dialogue popup
-// $(function(){
-//     $("#obtain-time").on('click',function(e){
-//         e.preventDefault();
-//        $("#dialog-form").dialog();
-//      });
-//   });
-
-//   $( "#obtain-time" ).button().on( "click", function() {
-// dialog.dialog( "open" );
-// });
 
 $(function() {
+
+
   $( "#dialog-form" ).dialog({
     dialogClass: "no-close",
     autoOpen: false,
     modal: true,
+    hide: true,
+    closeOnEscape: true,
     buttons: [
       {
         text: "close",
@@ -183,6 +163,53 @@ $(function() {
 //       dialog.dialog( "open" );
 //     });
 //   } );
+
+
+
+
+//form for appointment times collection
+var appForm = document.getElementById('submit-time');
+
+
+appForm.addEventListener('submit', (event) => {
+    var getstart = appForm.elements['userStart'];
+    var getend = appForm.elements['userEnd'];
+
+    var start = getstart.value;
+    var end = getend.value;
+
+
+    //extract hours and minutes from user submission
+    var separateStart = start.split(':');
+    var separateEnd = end.split(':');
+
+
+    var userStartHour = separateStart[0];
+    var userStartMinute = separateStart[1];
+
+    var userEndHour = separateEnd[0];
+    var userEndMinute = separateEnd[1];
+
+      // convert time to degrees (userStart to appStart)
+    var degFromUserHour = ((userStartHour - 9) * 20);
+    var degFromUserMinute = userStartMinute / 3;
+    var appStart = Math.floor(degFromUserHour + degFromUserMinute) + "deg";
+
+    var degFromUserHour2 = ((userEndHour - 9) * 20);
+    var degFromUserMinute2 = userEndMinute / 3;
+    var appEnd = Math.floor(degFromUserHour2 + degFromUserMinute2) + "deg";
+
+
+    //create gradient stops in appointment layer
+    document.documentElement.style
+    .setProperty('--app-start', appStart);
+
+    document.documentElement.style
+    .setProperty('--app-end', appEnd);
+
+    console.log(start + " " + end);
+    console.log(appStart + " " + appEnd);
+});
 
 
 //Custom Appointment button behaviour
