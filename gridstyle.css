@@ -410,8 +410,6 @@
         transparent 30%);
   }
 
-
-
   div, 
   div:before, 
   div:after {
@@ -426,7 +424,6 @@
     text-align: center;
     background-image: linear-gradient(0deg, var(--white) 0% 50%, var(--dark) 100%);
   }
-
 
   @media (max-width: 750px){
     .container{
@@ -448,8 +445,6 @@
   }
    }
 
-
-
   .main-dome{
     position: absolute;
     left: 50%;
@@ -469,7 +464,6 @@
     background-size: 100%;
   }  
  
-  
   .cell-4{
   background-color: var(--dark);
   position: relative;

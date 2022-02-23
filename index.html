@@ -19,73 +19,64 @@
     <title>Workday Clock</title>
 </head>
 <body>
-    
 
-    <div class="container">
-
-            <div class="cell cell-1"><h1>Workday Clock</h1></div>
-            <div class="cell cell-2">
-                <div class="main-dome">
-                        <h2>
-                            <div class="number">9</div>
-                            <div class="number">10</div>
-                            <div class="number">11</div>
-                            <div class="number">12</div>
-                            <div class="number">13</div>
-                            <div class="number">14</div>
-                            <div class="number">15</div>
-                            <div class="number">16</div>
-                            <div class="number">17</div>
-                            <div class="number">18</div>                    
-                            </h2>
-                </div>
-            </div>
-            <div class="cell cell-3">
-                <div class="small-dome">30</div>
-            </div>
-            <div class="cell cell-4">
-                <h2><div class="currenthour">
-                -- : --
-                </div></h2>
-            </div>
-            <div class="cell cell-5">
-                <a href="#" id="obtain-time" class="themeButton spin-app"> set appointment </a>
-
-<!-- start jquery dialog -->
-
-<div id="dialog-form" title="Enter appointment hours">
-
-    <form method="post" id="submit-time">
-            <label class="formbox" for="userStart">Select a start time:</label>
-            <input class="formbox timebox" type="time" id="userStart" name="userStart">
-            <label class="formbox" for="userEnd">Select an end time:</label>
-            <input class="formbox timebox" type="time" id="userEnd" name="userEnd">
-
-            <input class="themeButton submit-button formbox" type="submit" value="Submit Time">
-
-            <!-- <input type="submit" tabindex="-1" style="position:absolute; top:-1000px"> -->
-    </form>
-</div>
-
-<!-- end dialog -->
-
-                <a href="#" class="themeButton spin"> colour options </a>
-                    <div class="theme egg spin-in" onclick="setTheme('eggtheme')">rotten<br>egg</div>
-                    <div class="theme sunrise spin-in" onclick="setTheme('sunrisetheme')">sunrise</div>
-                    <div class="theme sunset spin-in" onclick="setTheme('sunsettheme')">sunset</div>
-                    <div class="theme news spin-in" onclick="setTheme('newstheme')">news</div>            
-                    <div class="theme pizza spin-in" onclick="setTheme('pizzatheme')">pizza</div>
-                    <div class="dummytheme"></div>
-
-            </div>
-
-
+<div class="container">
+    <div class="cell cell-1"><h1>Workday Clock</h1></div>
+    <div class="cell cell-2">
+        <div class="main-dome">
+                <h2>
+                    <div class="number">9</div>
+                    <div class="number">10</div>
+                    <div class="number">11</div>
+                    <div class="number">12</div>
+                    <div class="number">13</div>
+                    <div class="number">14</div>
+                    <div class="number">15</div>
+                    <div class="number">16</div>
+                    <div class="number">17</div>
+                    <div class="number">18</div>                    
+                    </h2>
+        </div>
+    </div>
+    <div class="cell cell-3">
+        <div class="small-dome">30</div>
+    </div>
+    <div class="cell cell-4">
+        <h2><div class="currenthour">
+        -- : --
+        </div></h2>
     </div>
 
+    <div class="cell cell-5">
+        <a href="#" id="obtain-time" class="themeButton spin-app"> set appointment </a>
 
+        <!-- start jquery dialog -->
+
+        <div id="dialog-form" title="Enter appointment hours">
+
+            <form method="post" id="submit-time">
+                    <label class="formbox" for="userStart">Select a start time:</label>
+                    <input class="formbox timebox" type="time" id="userStart" name="userStart">
+                    <label class="formbox" for="userEnd">Select an end time:</label>
+                    <input class="formbox timebox" type="time" id="userEnd" name="userEnd">
+
+                    <input class="themeButton submit-button formbox" type="submit" value="Submit Time">
+            </form>
+        </div>
+
+        <!-- end dialog -->
+
+        <a href="#" class="themeButton spin"> colour options </a>
+            <div class="theme egg spin-in" onclick="setTheme('eggtheme')">rotten<br>egg</div>
+            <div class="theme sunrise spin-in" onclick="setTheme('sunrisetheme')">sunrise</div>
+            <div class="theme sunset spin-in" onclick="setTheme('sunsettheme')">sunset</div>
+            <div class="theme news spin-in" onclick="setTheme('newstheme')">news</div>            
+            <div class="theme pizza spin-in" onclick="setTheme('pizzatheme')">pizza</div>
+            <div class="dummytheme"></div>
+    </div>
+</div>
 
     <script src="index.js" charset="utf-8"></script>
-
 
 </body>
 </html>
