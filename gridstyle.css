@@ -676,3 +676,33 @@ transform:rotate(90deg);
   background: rgb(227,47,12);
   background: linear-gradient(137deg, rgba(227,47,12,1) 2%, rgba(255,202,64,1) 50%, rgba(245,226,199,1) 100%);
 }
+
+/* dialog and form */
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.formbox{
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+}
+
+.timebox{
+  margin-bottom: 25px;
+}
+
+.submit-button{
+  /* margin: 10%; */
+  padding: 10px;
+}
+
+.ui-dialog-titlebar{
+  background:linear-gradient(to bottom, var(--medium) 5%, var(--dark) 100%);
+  background-color:var(--medium);
+}
+
+.ui-dialog-content{
+  color: var(--black);
+  background: var(--white);
+}

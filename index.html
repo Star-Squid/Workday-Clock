@@ -7,8 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Berkshire+Swash&family=Rancho&family=Cinzel+Decorative:wght@700&family=Fauna+One&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="dialog.css">
     <link rel="stylesheet" href="gridstyle.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    
     <link rel="icon" href="favicon.ico">
 
     <title>Workday Clock</title>
@@ -44,12 +49,27 @@
                 </div></h2>
             </div>
             <div class="cell cell-5">
-                <a href="#" class="themeButton spin-app"> set appointment </a>
-                
-                <a href="#" id="contactUs">Contact Us</a>                   
-<div id="dialog" title="Contact form">
-  <p>appear now</p>
+                <a href="#" id="obtain-time" class="themeButton spin-app"> set appointment </a>
+
+<!-- start jquery dialog -->
+
+<div id="dialog-form" title="Enter appointment hours">
+
+    <form action="#" method="post" id="submit-time">
+        <fieldset>
+            <label class="formbox" for="userStart">Select a start time:</label>
+            <input class="formbox timebox" type="time" id="userStart" name="userStart">
+            <label class="formbox" for="userEnd">Select an end time:</label>
+            <input class="formbox timebox" type="time" id="userEnd" name="userEnd">
+
+            <input class="themeButton submit-button formbox" type="submit" value="Submit Time">
+
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
 </div>
+
+<!-- end dialog -->
 
                 <a href="#" class="themeButton spin"> colour options </a>
                     <div class="theme egg spin-in" onclick="setTheme('eggtheme')">rotten<br>egg</div>
@@ -66,9 +86,6 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
     <script src="index.js" charset="utf-8"></script>
 
 

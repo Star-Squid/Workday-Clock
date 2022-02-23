@@ -49,55 +49,166 @@ $('.spin').on('click', function(){
     $('.spin-in').toggleClass('show2');
 });
 
+
+
+
+//form for appointment times collection
+const form  = document.getElementById('submit-time');
+
+form.addEventListener('submit', (event) => {
+    var getstart = form.elements['userStart'];
+    var getend = form.elements['userEnd'];
+
+    var start = getstart.value;
+    var end = getend.value;
+
+    console.log(start + " " + end);
+});
+
 //dialogue popup
-// $(function() {
-//     // this initializes the dialog (and uses some common options that I do)
-//     $("#dialog").dialog({
-//       autoOpen : false, modal : true, show : "blind", hide : "blind"
-//     });
-  
-//     // next add the onclick handler
-//     $("#contactUs").click(function() {
-//       $("#dialog").dialog("open");
-//       return false;
-//     });
+// $(function(){
+//     $("#obtain-time").on('click',function(e){
+//         e.preventDefault();
+//        $("#dialog-form").dialog();
+//      });
 //   });
 
-$(document).ready(function () {
-    $('#dialog').dialog({
-        autoOpen: false,
-        title: 'Basic Dialog'
-    });
-    $('#contactUs').click(function () {
-        $('#dialog').dialog('open');
-    });
+//   $( "#obtain-time" ).button().on( "click", function() {
+// dialog.dialog( "open" );
+// });
+
+$(function() {
+  $( "#dialog-form" ).dialog({
+    dialogClass: "no-close",
+    autoOpen: false,
+    modal: true,
+    buttons: [
+      {
+        text: "close",
+        click: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    ]
+  });
+  $( "#obtain-time" ).click(function() {
+    $( "#dialog-form" ).dialog( "open" );
+ });
 });
+
+// $( function() {
+//     var dialog, form,
+ 
+//       emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+//       name = $( "#name" ),
+//       email = $( "#email" ),
+//       password = $( "#password" ),
+//       allFields = $( [] ).add( name ).add( email ).add( password ),
+//       tips = $( ".validateTips" );
+ 
+//     // function updateTips( t ) {
+//     //   tips
+//     //     .text( t )
+//     //     .addClass( "ui-state-highlight" );
+//     //   setTimeout(function() {
+//     //     tips.removeClass( "ui-state-highlight", 1500 );
+//     //   }, 500 );
+//     // }
+ 
+//     // function checkLength( o, n, min, max ) {
+//     //   if ( o.val().length > max || o.val().length < min ) {
+//     //     o.addClass( "ui-state-error" );
+//     //     updateTips( "Length of " + n + " must be between " +
+//     //       min + " and " + max + "." );
+//     //     return false;
+//     //   } else {
+//     //     return true;
+//     //   }
+//     // }
+ 
+//     // function checkRegexp( o, regexp, n ) {
+//     //   if ( !( regexp.test( o.val() ) ) ) {
+//     //     o.addClass( "ui-state-error" );
+//     //     updateTips( n );
+//     //     return false;
+//     //   } else {
+//     //     return true;
+//     //   }
+//     // }
+ 
+//     function submitHours() {
+//       var valid = true;
+//       allFields.removeClass( "ui-state-error" );
+ 
+//       valid = valid && checkLength( name, "start", 1, 2 );
+//       valid = valid && checkLength( email, "end", 1, 2 );
+ 
+//       if ( valid ) {
+//         // $( "#users tbody" ).append( "<tr>" +
+//         //   "<td>" + name.val() + "</td>" +
+//         //   "<td>" + email.val() + "</td>" +
+//         //   "<td>" + password.val() + "</td>" +
+//         // "</tr>" );
+//         console.log('ok');
+//         dialog.dialog( "close" );
+//       }
+//       return valid;
+//     }
+ 
+//     dialog = $( "#dialog-form" ).dialog({
+//       autoOpen: false,
+//       dialogClass: "no-close",
+//       height: 400,
+//       width: 350,
+//       modal: true,
+//       buttons: {
+//         "Submit hours": submitHours,
+//         Cancel: function() {
+//           dialog.dialog( "close" );
+//         }
+//       },
+//       close: function() {
+//         form[ 0 ].reset();
+//         allFields.removeClass( "ui-state-error" );
+//       }
+//     });
+   
+//     form = dialog.find( "form" ).on( "submit", function( event ) {
+//       event.preventDefault();
+//       submitHours();
+      
+//     });
+ 
+//     $( "#obtain-time" ).button().on( "click", function() {
+//       dialog.dialog( "open" );
+//     });
+//   } );
 
 
 //Custom Appointment button behaviour
-$('.spin-app').on('click', function(){
+// $('.spin-app').on('click', function(){
 
-    //obtain start and end time
-    var userStartHour = window.prompt("Enter the appointment starting hour 9 - 17 (e.g. 15)");
-    var userStartMinute = window.prompt("Enter the appointment starting minutes 0 - 59 (e.g. 30)");
+//     //obtain start and end time with prompts
+//     var userStartHour = window.prompt("Enter the appointment starting hour 9 - 17 (e.g. 15)");
+//     var userStartMinute = window.prompt("Enter the appointment starting minutes 0 - 59 (e.g. 30)");
 
-    var userEndHour = window.prompt("Enter the appointment ending hour 9 - 17");
-    var userEndMinute = window.prompt("Enter the appointment ending minutes 0 - 59");
+//     var userEndHour = window.prompt("Enter the appointment ending hour 9 - 17");
+//     var userEndMinute = window.prompt("Enter the appointment ending minutes 0 - 59");
 
-    // convert time to degrees (userStart to appStart)
-    var degFromUserHour = ((userStartHour - 9) * 20);
-    var degFromUserMinute = userStartMinute / 3;
-    var appStart = Math.floor(degFromUserHour + degFromUserMinute) + "deg";
+    // // convert time to degrees (userStart to appStart)
+    // var degFromUserHour = ((userStartHour - 9) * 20);
+    // var degFromUserMinute = userStartMinute / 3;
+    // var appStart = Math.floor(degFromUserHour + degFromUserMinute) + "deg";
 
-    var degFromUserHour2 = ((userEndHour - 9) * 20);
-    var degFromUserMinute2 = userEndMinute / 3;
-    var appEnd = Math.floor(degFromUserHour2 + degFromUserMinute2) + "deg";
+    // var degFromUserHour2 = ((userEndHour - 9) * 20);
+    // var degFromUserMinute2 = userEndMinute / 3;
+    // var appEnd = Math.floor(degFromUserHour2 + degFromUserMinute2) + "deg";
 
 
-    //create gradient stops in appointment layer
-    document.documentElement.style
-    .setProperty('--app-start', appStart);
+    // //create gradient stops in appointment layer
+    // document.documentElement.style
+    // .setProperty('--app-start', appStart);
 
-    document.documentElement.style
-    .setProperty('--app-end', appEnd);
-});
+    // document.documentElement.style
+    // .setProperty('--app-end', appEnd);
+// });
