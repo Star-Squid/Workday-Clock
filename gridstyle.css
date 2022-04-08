@@ -51,18 +51,18 @@
 
   --overlay:
   conic-gradient(from -90deg at 50% 100%,
-  var(--seethrough) var(--timeasdegree), 
-  var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+  var(--seethrough) var(--timeasdegree),
+  var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg
   );
 
   --makeabigrainbow:
   radial-gradient(
       circle at 50% 100%,
-      var(--white) calc(40% - 1px), 
+      var(--white) calc(40% - 1px),
       transparent 40%);
 
 /* small dome styles */
-  --smallstripes: 
+  --smallstripes:
   conic-gradient(from -90deg at 50% 100%,
   var(--medium) 40deg,
   var(--white) 41deg 43deg,
@@ -74,14 +74,14 @@
 
   --smalloverlay:
   conic-gradient(from -90deg at 50% 100%,
-  var(--seethrough) var(--minutesasdegree), 
-  var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+  var(--seethrough) var(--minutesasdegree),
+  var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg
   );
 
-  --makearainbow: 
+  --makearainbow:
     radial-gradient(
     circle at 50% 100%,
-      var(--white) calc(30% - 1px), 
+      var(--white) calc(30% - 1px),
       transparent 30%);
 }
 
@@ -130,18 +130,18 @@
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--timeasdegree), 
-    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    var(--seethrough) var(--timeasdegree),
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg
     );
 
     --makeabigrainbow:
     radial-gradient(
         circle at 50% 100%,
-        var(--white) calc(40% - 1px), 
+        var(--white) calc(40% - 1px),
         transparent 40%);
 
   /* small dome styles */
-    --smallstripes: 
+    --smallstripes:
     conic-gradient(from -90deg at 50% 100%,
     var(--medium) 40deg,
     var(--white) 41deg 43deg,
@@ -153,14 +153,14 @@
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--minutesasdegree), 
-    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    var(--seethrough) var(--minutesasdegree),
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg
     );
 
-    --makearainbow: 
+    --makearainbow:
       radial-gradient(
       circle at 50% 100%,
-        var(--white) calc(30% - 1px), 
+        var(--white) calc(30% - 1px),
         transparent 30%);
   }
 
@@ -198,18 +198,18 @@
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--timeasdegree), 
-    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    var(--seethrough) var(--timeasdegree),
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg
     );
 
     --makeabigrainbow:
     radial-gradient(
         circle at 50% 100%,
-        var(--white) calc(40% - 1px), 
+        var(--white) calc(40% - 1px),
         transparent 40%);
 
   /* small dome styles */
-    --smallstripes: 
+    --smallstripes:
     conic-gradient(from -90deg at 50% 100%,
     var(--medium) 40deg,
     var(--white) 41deg 43deg,
@@ -221,14 +221,14 @@
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--minutesasdegree), 
-    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    var(--seethrough) var(--minutesasdegree),
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg
     );
 
-    --makearainbow: 
+    --makearainbow:
       radial-gradient(
       circle at 50% 100%,
-        var(--white) calc(30% - 1px), 
+        var(--white) calc(30% - 1px),
         transparent 30%);
   }
 
@@ -239,7 +239,7 @@
     --medium: #FD7400;
     --med-grey: #D1CDC5;
     --dark: #005081;
-    --black: #0f2d3b;
+    --black: #A8C1CE;
     --transparency:rgba(0, 0, 0, 0);
     --seethrough:rgba(31, 0, 92, 0.3);
 
@@ -267,18 +267,18 @@
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--timeasdegree), 
-    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    var(--seethrough) var(--timeasdegree),
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg
     );
 
     --makeabigrainbow:
     radial-gradient(
         circle at 50% 100%,
-        var(--white) calc(40% - 1px), 
+        var(--white) calc(40% - 1px),
         transparent 40%);
 
   /* small dome styles */
-    --smallstripes: 
+    --smallstripes:
     conic-gradient(from -90deg at 50% 100%,
     var(--medium) 40deg,
     var(--white) 41deg 43deg,
@@ -290,14 +290,14 @@
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--minutesasdegree), 
-    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    var(--seethrough) var(--minutesasdegree),
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg
     );
 
-    --makearainbow: 
+    --makearainbow:
       radial-gradient(
       circle at 50% 100%,
-        var(--white) calc(30% - 1px), 
+        var(--white) calc(30% - 1px),
         transparent 30%);
   }
 
@@ -327,31 +327,31 @@
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--timeasdegree), 
-    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    var(--seethrough) var(--timeasdegree),
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg
     );
 
     --makeabigrainbow:
     radial-gradient(
         circle at 50% 100%,
-        var(--white) calc(40% - 1px), 
+        var(--white) calc(40% - 1px),
         transparent 40%);
 
 
   /* small dome styles */
-    --smallstripes: 
+    --smallstripes:
     url(small-news.png);
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--minutesasdegree), 
-    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    var(--seethrough) var(--minutesasdegree),
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg
     );
 
-    --makearainbow: 
+    --makearainbow:
       radial-gradient(
       circle at 50% 100%,
-        var(--white) calc(30% - 1px), 
+        var(--white) calc(30% - 1px),
         transparent 30%);
   }
 
@@ -378,18 +378,18 @@
   /* main dome styles */
     --stripes:
     url("painted-pizza.png");
-    
+
 
     --overlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--timeasdegree), 
-    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg 
+    var(--seethrough) var(--timeasdegree),
+    var(--transparency) calc(var(--timeasdegree) + 1deg) 180deg
     );
 
     --makeabigrainbow:
     radial-gradient(
       circle at 50% 100%,
-        transparent 30%, 
+        transparent 30%,
         transparent 30%);
 
 
@@ -399,23 +399,23 @@
 
     --smalloverlay:
     conic-gradient(from -90deg at 50% 100%,
-    var(--seethrough) var(--minutesasdegree), 
-    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg 
+    var(--seethrough) var(--minutesasdegree),
+    var(--transparency) calc(var(--minutesasdegree) + 2deg) 180deg
     );
 
-    --makearainbow: 
+    --makearainbow:
     radial-gradient(
       circle at 50% 100%,
-        transparent 30%, 
+        transparent 30%,
         transparent 30%);
   }
 
-  div, 
-  div:before, 
+  div,
+  div:before,
   div:after {
     box-sizing: border-box;
   }
-  
+
   body {
     background: var(--white);
     background-color: var(--white);
@@ -434,7 +434,7 @@
       grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
     }
    }
-  
+
    @media (min-width: 751px){
   .container{
     width: 98vw;
@@ -455,15 +455,15 @@
     border-top-left-radius: calc(var(--domeheight) * 2);
     border-top-right-radius: calc(var(--domeheight) * 2);
 
-    background: 
+    background:
         var(--makeabigrainbow),
         var(--overlay),
         var(--appointment),
         var(--stripes);
 
     background-size: 100%;
-  }  
- 
+  }
+
   .cell-4{
   background-color: var(--dark);
   position: relative;
@@ -503,31 +503,31 @@
  }
  .number:nth-child(2){
   transform: rotate(-70deg)
-} 
+}
 .number:nth-child(3){
   transform: rotate(-50deg)
-} 
+}
 .number:nth-child(4){
   transform: rotate(-30deg)
-} 
+}
 .number:nth-child(5){
   transform: rotate(-10deg)
-} 
+}
 .number:nth-child(6){
   transform: rotate(10deg)
-} 
+}
 .number:nth-child(7){
   transform: rotate(30deg)
-} 
+}
 .number:nth-child(8){
   transform: rotate(50deg)
-} 
+}
 .number:nth-child(9){
   transform: rotate(70deg)
-} 
+}
  .number:last-child{
 transform:rotate(90deg);
-} 
+}
 
 .small-dome{
   position: absolute;
@@ -539,7 +539,7 @@ transform:rotate(90deg);
   border-top-left-radius: calc(var(--domeheight) / 2);
   border-top-right-radius: calc(var(--domeheight) / 2);
 
-  background: 
+  background:
     var(--makearainbow),
     var(--smalloverlay),
     var(--smallstripes);
@@ -592,7 +592,7 @@ transform:rotate(90deg);
     opacity: 0;
     transition: all .25s ease;
   }
-  
+
   .spin-in.show2 {
     opacity: 1;
     width: 67px;
