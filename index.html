@@ -56,15 +56,18 @@
 
             <form method="post" id="submit-time">
                     <label class="formbox" for="userStart">Select a start time:</label>
-                    <input class="formbox timebox" type="time" id="userStart" name="userStart">
+                    <input class="formbox timebox" type="time" id="userStart" name="userStart" required>
                     <label class="formbox" for="userEnd">Select an end time:</label>
-                    <input class="formbox timebox" type="time" id="userEnd" name="userEnd">
+                    <input class="formbox timebox" type="time" id="userEnd" name="userEnd" required>
 
                     <input class="themeButton submit-button formbox" type="submit" value="Submit Time">
             </form>
         </div>
 
         <!-- end dialog -->
+
+        <div class="cell cell-5">
+            <a href="#" id="clear-app" class="themeButton spin-app"> clear appointments </a>
 
         <a href="#" class="themeButton spin"> colour options </a>
             <div class="theme egg spin-in" onclick="setTheme('eggtheme')">rotten<br>egg</div>

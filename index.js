@@ -111,3 +111,17 @@ appForm.addEventListener('submit', (event) => {
     document.documentElement.style
     .setProperty('--app-end', appEnd);
 });
+
+var clearForm = document.getElementById('clear-app');
+
+clearForm.addEventListener('mouseup', (event) => {
+  //create gradient stops in appointment layer
+  document.documentElement.style
+  .setProperty('--app-start', 0);
+
+  document.documentElement.style
+  .setProperty('--app-end', 0);
+});
+
+
+
